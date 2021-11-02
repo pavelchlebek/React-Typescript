@@ -2,6 +2,7 @@ import './App.css';
 
 import React from 'react';
 
+import { First } from './First';
 import logo from './logo.svg';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <p>
           Palko <code>the programmer</code> is the greatest one!
         </p>
+        <First label="Palko je moc príma kluk, je s ním holkam fajn!" />
         <a
           className="App-link"
           href="https://reactjs.org"
