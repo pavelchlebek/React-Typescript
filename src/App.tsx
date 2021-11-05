@@ -1,28 +1,15 @@
-import './App.css';
+import { Todos } from './components/Todos';
+import Todo from './models/todo';
 
-import React from 'react';
-
-import { First } from './First';
-import logo from './logo.svg';
+const todos = [
+  new Todo("Palko je super kluk!", "fsdggg"),
+  new Todo("Palko si dneska vrzne!", "gggh"),
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Palko <code>the programmer</code> is the greatest one!
-        </p>
-        <First label="Palko je moc príma kluk, je s ním holkam fajn!" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Todos items={todos} />
     </div>
   )
 }
