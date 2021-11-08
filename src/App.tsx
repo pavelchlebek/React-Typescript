@@ -1,16 +1,15 @@
-import { Todos } from './components/Todos';
-import Todo from './models/todo';
+import React from 'react';
 
-const todos = [
-  new Todo("Palko je super kluk!", "fsdggg"),
-  new Todo("Palko si dneska vrzne!", "gggh"),
-]
+import { NewTodo } from './components/NewTodo';
+import { Todos } from './components/Todos';
+import { TodosContextProvider } from './store/todos-context';
 
 function App() {
   return (
-    <div>
-      <Todos items={todos} />
-    </div>
+    <TodosContextProvider>
+      <NewTodo />
+      <Todos />
+    </TodosContextProvider>
   )
 }
 
