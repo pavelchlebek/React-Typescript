@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react"
 
-import { NewTodo } from './components/NewTodo';
-import { Todos } from './components/Todos';
-import { TodosContextProvider } from './store/todos-context';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import { UseReducer } from "./components/screens/UseReducer"
+import { ContextApp } from "./ContextApp"
 
 function App() {
   return (
-    <TodosContextProvider>
-      <NewTodo />
-      <Todos />
-    </TodosContextProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ContextApp />} />
+        <Route path="/useReducer" element={<UseReducer />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
