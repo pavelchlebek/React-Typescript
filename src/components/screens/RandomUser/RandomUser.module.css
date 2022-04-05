@@ -1,0 +1,50 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  background-color: darkcyan;
+  color: white;
+  font-size: large;
+}
+
+button {
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #a851ff;
+  background-color: #a851ff;
+  color: #ccc;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+button:hover {
+  background-color: white;
+  color: #a851ff;
+  font-weight: 700;
+}
+
+.user {
+  width: 400px;
+  height: 600px;
+  border: 1px solid white;
+  overflow-y: scroll;
+}
+
+.hookUser {
+  width: 400px;
+  height: 600px;
+  border: 1px solid white;
+  overflow-y: scroll;
+}
+
+.input {
+  margin-left: 14px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 50px;
+}
