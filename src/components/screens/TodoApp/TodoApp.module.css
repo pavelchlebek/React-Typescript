@@ -1,0 +1,10 @@
+.content {
+  margin: 150px;
+}
+
+.content button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  margin: 10px 0;
+}

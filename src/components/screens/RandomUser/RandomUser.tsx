@@ -32,6 +32,8 @@ export const RandomUser: React.FC<TProps> = () => {
   const [userCount, setUserCount] = React.useState(0)
   const [someData, setSomeData] = React.useState()
 
+  const [checked, setChecked] = React.useState(true)
+
   // changing object keys name
   const { data: fetchedUser, loading, refetch } = useFetch2(`https://randomuser.me/api/?results=1`)
 
@@ -54,7 +56,7 @@ export const RandomUser: React.FC<TProps> = () => {
     }
   }
 
-  // console.log("hookUsers: ", hookUsers)
+  console.log("checked: ", checked)
 
   const handleFetch = () => {
     fetchDataSet("https://randomuser.me/api/?results=1", (data) => setSomeData(data))
@@ -88,6 +90,7 @@ export const RandomUser: React.FC<TProps> = () => {
       <button onClick={() => fetchUsers(userCount)}>Fetch User</button>
       <button onClick={triggerFetch}>useTriggerFetch</button>
       <button onClick={refetch}>Refetch</button>
+      <input type="checkbox" onChange={(e) => setChecked(e.target.checked)} checked={checked} />
       <div className={classes.display}>Weronika na mne mysli!!!</div>
     </div>
   )
