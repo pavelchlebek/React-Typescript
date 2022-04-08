@@ -25,13 +25,20 @@ export const TodoApp: React.FC = () => {
 
   const todoNameRef = React.useRef<HTMLInputElement>(null)
 
-  const handleCompleted = (id: number) => {
-    const newTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        todo.complete = !todo.complete
-      }
-      return todo
-    })
+  // const handleCompleted = (id: number) => {
+  //   const newTodos = todos.map((todo) => {
+  //     if (todo.id === id) {
+  //       todo.complete = !todo.complete
+  //     }
+  //     return todo
+  //   })
+  //   setTodos(newTodos)
+  // }
+
+  const toggleTodo = (id: number) => {
+    const newTodos = [...todos]
+    const todo = todos.find((todo) => todo.id === id)
+    todo!.complete = !todo!.complete
     setTodos(newTodos)
   }
 
@@ -48,13 +55,18 @@ export const TodoApp: React.FC = () => {
     todoNameRef.current!.value = ""
   }
 
+  const handleClearComplete = () => {
+    const updatedTodos = todos.filter((todo) => !todo.complete)
+    setTodos(updatedTodos)
+  }
+
   return (
     <div className={classes.content}>
-      <TodoList todos={todos} onChange={handleCompleted} />
+      <TodoList todos={todos} onChange={toggleTodo} />
       <input type="text" ref={todoNameRef} />
       <button onClick={addTodoHandler}>Add Todo</button>
-      <button>Clear Completed Todo</button>
-      <div>0 left todo</div>
+      <button onClick={handleClearComplete}>Clear Completed Todo</button>
+      <div>{`${todos.filter((todo) => !todo.complete).length} left to do`}</div>
     </div>
   )
 }

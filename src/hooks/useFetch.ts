@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 // useFetch hook that is typically used for fetching initial data for cmp (eg. screen)
-const useFetch = (url: string) => {
+export const useFetch = (url: string) => {
   const [data, setData] = React.useState(null)
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState(null)

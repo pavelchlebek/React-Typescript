@@ -4,14 +4,14 @@ import { ITodo } from './TodoApp';
 
 type TProps = NoChildren & {
   todo: ITodo
-  onChange: () => void
+  onChange: (id: number) => void
 }
 
 export const Todo: React.FC<TProps> = ({ todo, onChange }) => {
   return (
     <div>
       <label>
-        <input type="checkbox" onChange={onChange} checked={todo.complete} />
+        <input type="checkbox" onChange={() => onChange(todo.id)} checked={todo.complete} />
         {todo.name}
       </label>
     </div>

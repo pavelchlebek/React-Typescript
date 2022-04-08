@@ -12,7 +12,7 @@ export const TodoList: React.FC<TProps> = ({ todos, onChange }) => {
   return (
     <div>
       {todos.map((todo) => {
-        return <Todo todo={todo} key={todo.id} onChange={() => onChange(todo.id)} />
+        return <Todo todo={todo} key={todo.id} onChange={onChange} />
       })}
     </div>
   )

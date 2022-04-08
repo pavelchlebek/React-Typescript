@@ -2,10 +2,7 @@ import * as React from 'react';
 
 import axios from 'axios';
 
-import useFetch2, {
-  fetchDataSet,
-  useTriggerFetch2,
-} from '../../../hooks/useFetch';
+import useFetch2, { useTriggerFetch2 } from '../../../hooks/useFetch';
 import classes from './RandomUser.module.css';
 import { User } from './User';
 
@@ -30,7 +27,7 @@ const flattenUser = (user: any) => {
 export const RandomUser: React.FC<TProps> = () => {
   const [users, setUsers] = React.useState<IUser[]>([])
   const [userCount, setUserCount] = React.useState(0)
-  const [someData, setSomeData] = React.useState()
+  // const [someData, setSomeData] = React.useState()
 
   const [checked, setChecked] = React.useState(true)
 
@@ -40,7 +37,6 @@ export const RandomUser: React.FC<TProps> = () => {
   const {
     data: triggeredUser,
     loading: triggeredLoading,
-    error: triggeredError,
     triggerFetch,
   } = useTriggerFetch2("https://randomuser.me/api/?results=1")
 
@@ -58,9 +54,9 @@ export const RandomUser: React.FC<TProps> = () => {
 
   console.log("checked: ", checked)
 
-  const handleFetch = () => {
-    fetchDataSet("https://randomuser.me/api/?results=1", (data) => setSomeData(data))
-  }
+  // const handleFetch = () => {
+  //   fetchDataSet("https://randomuser.me/api/?results=1", (data) => setSomeData(data))
+  // }
 
   return (
     <div className={classes.screen}>
