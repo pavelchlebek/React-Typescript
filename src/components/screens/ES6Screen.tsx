@@ -34,26 +34,17 @@ const personOne = {
   },
 }
 
-const personTwo = {
-  name: "Weronika",
-  age: 22,
-  address: {
-    street: "Somewhere Else",
-    city: "Cieszyn",
-  },
-}
+// const { name: palkoName, ...restValues } = personOne
+// const {
+//   address: { street, city },
+// } = personTwo
 
-const { name: palkoName, ...restValues } = personOne
-const {
-  address: { street, city },
-} = personTwo
+// console.log(palkoName)
+// console.log(street, city)
 
-console.log(palkoName)
-console.log(street, city)
+// const personThree = { ...personOne, ...personTwo }
 
-const personThree = { ...personOne, ...personTwo }
-
-console.log(personThree)
+// console.log(personThree)
 
 const printUser = ({ name, age, favoriteFood = "beef" }: any) => {
   console.log(`Name: ${name} Age: ${age} food: ${favoriteFood}`)
