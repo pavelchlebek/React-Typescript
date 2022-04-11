@@ -62,5 +62,5 @@ const printUser = ({ name, age, favoriteFood = "beef" }: any) => {
 printUser(personOne)
 
 export const ES6Screen: React.FC<TProps> = () => {
-  return <div style={{ margin: "150px" }}>Pavel a Weronika</div>
+  return <div style={{ margin: "150px" }}>Palo je buh!!!</div>
 }
