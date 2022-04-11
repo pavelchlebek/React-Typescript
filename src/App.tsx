@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { Debounce } from './components/screens/Debounce/Debounce';
+import { ES6Screen } from './components/screens/ES6Screen';
 import { LiveCodeApp } from './components/screens/LiveCode/LiveCodeApp';
 import { RandomUser } from './components/screens/RandomUser/RandomUser';
 import { TodoApp } from './components/screens/TodoApp/TodoApp';
@@ -25,6 +26,7 @@ function App() {
         <Route path="/todoApp" element={<TodoApp />} />
         <Route path="/useEffect" element={<UseEffect />} />
         <Route path="/liveCode" element={<LiveCodeApp />} />
+        <Route path="/es6" element={<ES6Screen />} />
       </Routes>
     </BrowserRouter>
   )

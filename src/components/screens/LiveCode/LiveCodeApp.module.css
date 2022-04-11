@@ -6,3 +6,9 @@
 input {
   margin-bottom: 20px;
 }
+
+select {
+  padding: 6px;
+  color: chocolate;
+  background-color: aquamarine;
+}
