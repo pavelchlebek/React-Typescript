@@ -8,6 +8,7 @@ import {
 
 import { Debounce } from './components/screens/Debounce/Debounce';
 import { ES6Screen } from './components/screens/ES6Screen';
+import { JSFeatures } from './components/screens/JSFeatures';
 import { CountrySeeker } from './components/screens/LiveCode/CountrySeeker';
 import { LiveCodeApp } from './components/screens/LiveCode/LiveCodeApp';
 import { RandomUser } from './components/screens/RandomUser/RandomUser';
@@ -31,6 +32,7 @@ function App() {
         <Route path="/es6" element={<ES6Screen />} />
         <Route path="/ts" element={<TSScreen />} />
         <Route path="/countrySeeker" element={<CountrySeeker />} />
+        <Route path="/jsFeatures" element={<JSFeatures />} />
       </Routes>
     </BrowserRouter>
   )

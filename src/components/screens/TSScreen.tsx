@@ -16,15 +16,15 @@ type TProps = NoChildren & {}
 
 // console.log(objectKeys)
 
-type TProperties = "propA" | "propB"
-type TMappedProperties = {
-  [P in TProperties]: P
-}
+// type TProperties = "propA" | "propB"
+// type TMappedProperties = {
+//   [P in TProperties]: P
+// }
 
-const is: TMappedProperties = {
-  propA: "propA",
-  propB: "propB",
-}
+// const is: TMappedProperties = {
+//   propA: "propA",
+//   propB: "propB",
+// }
 
 export const TSScreen: React.FC<TProps> = () => {
   return <div style={{ margin: "150px" }}>Palko je bůh!!!</div>

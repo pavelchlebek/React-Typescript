@@ -7,10 +7,10 @@ import classes from './LiveCodeApp.module.css';
 
 type TProps = NoChildren
 
-interface ICoords {
-  lat: number
-  lng: number
-}
+// interface ICoords {
+//   lat: number
+//   lng: number
+// }
 
 interface IResult {
   sunrise: string
