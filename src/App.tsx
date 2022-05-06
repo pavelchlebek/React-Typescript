@@ -16,7 +16,9 @@ import { RandomUser } from './components/screens/RandomUser/RandomUser';
 import { TodoApp } from './components/screens/TodoApp/TodoApp';
 import { TSScreen } from './components/screens/TSScreen';
 import { UseEffect } from './components/screens/UseEffect/UseEffect';
+import { UseMemo } from './components/screens/UseMemo';
 import { UseReducer } from './components/screens/UseReducer';
+import { UseRef } from './components/screens/UseRef';
 import { ContextApp } from './ContextApp';
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
         <Route path="/countrySeeker" element={<CountrySeeker />} />
         <Route path="/jsFeatures" element={<JSFeatures />} />
         <Route path="/photoEditor" element={<PhotoEditor />} />
+        <Route path="/useRef" element={<UseRef />} />
+        <Route path="/useMemo" element={<UseMemo />} />
       </Routes>
     </BrowserRouter>
   )
