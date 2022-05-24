@@ -13,6 +13,9 @@ import { CountrySeeker } from './components/screens/LiveCode/CountrySeeker';
 import { LiveCodeApp } from './components/screens/LiveCode/LiveCodeApp';
 import { PhotoEditor } from './components/screens/PhotoEditor/PhotoEditor';
 import { RandomUser } from './components/screens/RandomUser/RandomUser';
+import {
+  ReactHookForm,
+} from './components/screens/ReactHookForm/ReactHookForm';
 import { RCApp } from './components/screens/ReactQuery/RCApp';
 import { TodoApp } from './components/screens/TodoApp/TodoApp';
 import { TSScreen } from './components/screens/TSScreen';
@@ -41,6 +44,7 @@ function App() {
         <Route path="/useRef" element={<UseRef />} />
         <Route path="/useMemo" element={<UseMemo />} />
         <Route path="/reactQuery" element={<RCApp />} />
+        <Route path="/reactHookForm" element={<ReactHookForm />} />
       </Routes>
     </BrowserRouter>
   )
