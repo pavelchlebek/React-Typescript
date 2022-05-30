@@ -8,6 +8,9 @@ import {
 
 import { Debounce } from './components/screens/Debounce/Debounce';
 import { ES6Screen } from './components/screens/ES6Screen';
+import {
+  ForwardingRef,
+} from './components/screens/ForwardingRef/ForwardingRef';
 import { JSFeatures } from './components/screens/JSFeatures';
 import { CountrySeeker } from './components/screens/LiveCode/CountrySeeker';
 import { LiveCodeApp } from './components/screens/LiveCode/LiveCodeApp';
@@ -45,6 +48,7 @@ function App() {
         <Route path="/useMemo" element={<UseMemo />} />
         <Route path="/reactQuery" element={<RCApp />} />
         <Route path="/reactHookForm" element={<ReactHookForm />} />
+        <Route path="/forwardingRef" element={<ForwardingRef />} />
       </Routes>
     </BrowserRouter>
   )
