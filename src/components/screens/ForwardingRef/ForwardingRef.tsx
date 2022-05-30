@@ -10,6 +10,17 @@ export const ForwardingRef: React.FC<TProps> = () => {
 
   const submitRef = React.useRef<HTMLButtonElement>(null)
 
+  const countRef = React.useRef(0)
+
+  // const countRef = React.createRef(0) in this case it cannot be used. Is is READ ONLY
+
+  const [date, setDate] = React.useState("")
+  const [firstName, setFirstName] = React.useState("")
+
+  React.useEffect(() => {
+    countRef.current = countRef.current + 1
+  })
+
   React.useEffect(() => {
     if (firstNameRef.current) {
       firstNameRef.current.focus()
@@ -51,11 +62,26 @@ export const ForwardingRef: React.FC<TProps> = () => {
         placeholder="enter first name"
         ref={firstNameRef}
         onKeyDown={(e) => firstKeyDown(e)}
+        onChange={(e) => setFirstName(e.target.value)}
+        onClick={(e) => console.log(e.target)}
+        value={firstName}
       />
-      <Input type="text" placeholder="enter last name" ref={lastNameRef} onKeyDown={lastKeyDown} />
+      <Input
+        type="text"
+        placeholder="enter last name"
+        ref={lastNameRef}
+        onKeyDown={lastKeyDown}
+        onChange={(e) => console.log(e.target.value)}
+        onClick={(e) => console.log(e.currentTarget)}
+        value="jou"
+      />
       <button onKeyDown={submitKeyDown} ref={submitRef}>
         Submit
       </button>
+      <input type="date" onChange={(e) => setDate(e.target.value)} />
+      <div style={{ color: "white" }}>
+        Screen rendered {countRef.current} times. Date: {date}
+      </div>
     </div>
   )
 }
