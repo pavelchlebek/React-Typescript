@@ -1,12 +1,12 @@
-import React from 'react';
-
 import {
   BrowserRouter,
   Route,
   Routes,
 } from 'react-router-dom';
 
+import { Closures } from './components/screens/Closures/Closures';
 import { Debounce } from './components/screens/Debounce/Debounce';
+import { Enums } from './components/screens/Enums/Enums';
 import { ES6Screen } from './components/screens/ES6Screen';
 import {
   ForwardingRef,
@@ -49,6 +49,8 @@ function App() {
         <Route path="/reactQuery" element={<RCApp />} />
         <Route path="/reactHookForm" element={<ReactHookForm />} />
         <Route path="/forwardingRef" element={<ForwardingRef />} />
+        <Route path="/enums" element={<Enums />} />
+        <Route path="/closures" element={<Closures />} />
       </Routes>
     </BrowserRouter>
   )
