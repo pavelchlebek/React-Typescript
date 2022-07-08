@@ -27,4 +27,4 @@ const makeAdder = (x: number) => {
 const add17 = makeAdder(17)
 
 // console.log(add17(5))
-console.log(makeAdder(15)(5))
+// console.log(makeAdder(15)(5))

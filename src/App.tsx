@@ -14,6 +14,9 @@ import {
 import { JSFeatures } from './components/screens/JSFeatures';
 import { CountrySeeker } from './components/screens/LiveCode/CountrySeeker';
 import { LiveCodeApp } from './components/screens/LiveCode/LiveCodeApp';
+import {
+  LocalStorageScreen,
+} from './components/screens/LocalStorage/LocalStorageScreen';
 import { PhotoEditor } from './components/screens/PhotoEditor/PhotoEditor';
 import { RandomUser } from './components/screens/RandomUser/RandomUser';
 import {
@@ -51,6 +54,7 @@ function App() {
         <Route path="/forwardingRef" element={<ForwardingRef />} />
         <Route path="/enums" element={<Enums />} />
         <Route path="/closures" element={<Closures />} />
+        <Route path="/localStorage" element={<LocalStorageScreen />} />
       </Routes>
     </BrowserRouter>
   )
